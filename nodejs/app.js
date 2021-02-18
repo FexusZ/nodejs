@@ -1,15 +1,7 @@
 const express = require('express');
 const app = express();
 
-
-const mysql = require('mysql');
-
-var db = mysql.createConnection({
-  	host: "localhost",
-  	user: "root",
-  	password: "",
-  	database: "go-fullstack"
-});
+var db = require('./init/init');
 
 app.use(function(req, res, next) {
 	console.log('accept origin');
